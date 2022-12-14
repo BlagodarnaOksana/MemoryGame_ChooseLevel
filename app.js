@@ -154,6 +154,20 @@ function checkMatch() {
     cards[optionTwoId].removeEventListener('click', flipCard)
     cardsWon.push(cardsChosen)
     showPopup('url(img/cool.png)')
+
+    console.log('match', cards[optionOneId], cards[optionTwoId])
+
+    cards[optionOneId].style.animationName = 'none'
+    cards[optionOneId].style.transform = 'none'
+    cards[optionOneId].style.borderRadius = '5px'
+    cards[optionOneId].style.border = 'none'
+    cards[optionOneId].style.margin = '2px'
+
+    cards[optionTwoId].style.animationName = 'none'
+    cards[optionTwoId].style.transform = 'none'
+    cards[optionTwoId].style.borderRadius = '5px'
+    cards[optionTwoId].style.border = 'none'
+    cards[optionOneId].style.margin = '2px'
   } else {
     cards[optionOneId].setAttribute('src', 'img/blank.png')
     cards[optionTwoId].setAttribute('src', 'img/blank.png')
@@ -168,7 +182,7 @@ function checkMatch() {
     setTimeout(function () {
       cards[optionOneId].style.animationName = null
       cards[optionTwoId].removeAttribute("style")
-      console.log('setTimeout is working', cards[optionOneId], cards[optionTwoId])
+      //console.log('setTimeout is working', cards[optionOneId], cards[optionTwoId])
     }, 200)
   }
 
