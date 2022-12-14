@@ -124,8 +124,11 @@ h1 {
   animation-duration: 0.3s;
   animation-timing-function: linear;
   animation-direction: normal;
-}
 
+  border-radius: 7px;
+  border: solid 1px rgba(250, 227, 133, 1);
+  transform: scale(1.05, 1.05);
+}
 
 @keyframes changeScale {
   0% {
@@ -135,15 +138,15 @@ h1 {
   }
 
   50% {
-    border-radius: 15px;
+    border-radius: 7px;
     border: solid 1px rgba(250, 227, 133, 1);
     transform: scale(1.05, 1.05);
   }
 
   100% {
-    border-radius: 3px;
+    border-radius: 7px;
     border: solid 1px rgba(120, 50, 5, 0.8);
-    transform: scale(1, 1);
+    transform: scale(1.05, 1.05);
   }
 }
 
